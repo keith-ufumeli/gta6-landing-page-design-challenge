@@ -25,7 +25,11 @@ export default function CharacterCard({ name, role, image, description }: Charac
         <h3 className="text-xl font-bold">{name}</h3>
         <p className="text-red-500 text-sm mb-2">{role}</p>
         <p className="text-gray-400 text-sm">{description}</p>
-        <Button variant="ghost" size="sm" className="mt-3 text-xs">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="mt-3 text-xs text-red-500 hover:text-red-400 hover:bg-red-950/20 transition-all duration-300"
+        >
           <Info className="h-3 w-3 mr-1" /> Character Profile
         </Button>
       </div>

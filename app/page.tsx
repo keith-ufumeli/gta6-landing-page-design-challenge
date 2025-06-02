@@ -63,7 +63,7 @@ export default function GTA6Landing() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/images/gta6-hero-bg.jpg"
             alt="GTA 6 Background"
             fill
             className="object-cover opacity-60"
@@ -88,7 +88,11 @@ export default function GTA6Landing() {
               <Button size="lg" variant="destructive" className="bg-red-600 hover:bg-red-700">
                 <ShoppingCart className="mr-2 h-5 w-5" /> Pre-order Now
               </Button>
-              <Button size="lg" variant="outline" className="border-red-600 text-white hover:bg-red-900/20">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-red-600 text-red-500 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300"
+              >
                 <Play className="mr-2 h-5 w-5" /> Watch Trailer
               </Button>
             </div>
@@ -135,12 +139,15 @@ export default function GTA6Landing() {
                 expansive open world in the series' history. Navigate the treacherous criminal underworld as you rise
                 from small-time hustler to kingpin of your own empire.
               </p>
-              <Button variant="outline" className="border-red-600 text-white hover:bg-red-900/20">
+              <Button
+                variant="outline"
+                className="border-red-600 text-red-500 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300"
+              >
                 Learn More <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image src="/placeholder.svg?height=800&width=1200" alt="GTA 6 Story" fill className="object-cover" />
+              <Image src="/images/vice-city-skyline.jpg" alt="GTA 6 Story" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
               <Button
                 variant="ghost"
@@ -178,19 +185,19 @@ export default function GTA6Landing() {
             <CharacterCard
               name="Lucia"
               role="The Mastermind"
-              image="/placeholder.svg?height=500&width=400"
+              image="/images/character-lucia.jpg"
               description="A cunning and ambitious former cartel member with a talent for strategy and manipulation."
             />
             <CharacterCard
               name="Jason"
               role="The Enforcer"
-              image="/placeholder.svg?height=500&width=400"
+              image="/images/character-jason.jpg"
               description="An ex-military specialist with unmatched combat skills and a complicated moral code."
             />
             <CharacterCard
               name="Ricardo Diaz"
               role="The Kingpin"
-              image="/placeholder.svg?height=500&width=400"
+              image="/images/character-ricardo.jpg"
               description="Vice City's most powerful crime lord who controls the city's underworld with an iron fist."
             />
           </div>
@@ -215,7 +222,7 @@ export default function GTA6Landing() {
                 {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
                   <div key={item} className="aspect-video relative rounded-lg overflow-hidden group cursor-pointer">
                     <Image
-                      src={`/placeholder.svg?height=270&width=480`}
+                      src={`/images/screenshot-${Math.min(item, 4)}.jpg`}
                       alt={`GTA 6 Screenshot ${item}`}
                       fill
                       className="object-cover transition-transform group-hover:scale-105"
@@ -226,8 +233,8 @@ export default function GTA6Landing() {
             </TabsContent>
             <TabsContent value="videos">
               <div className="grid md:grid-cols-2 gap-6">
-                <VideoPlayer thumbnail="/placeholder.svg?height=270&width=480" title="Official Trailer" />
-                <VideoPlayer thumbnail="/placeholder.svg?height=270&width=480" title="Gameplay Reveal" />
+                <VideoPlayer thumbnail="/images/city-night.jpg" title="Official Trailer" />
+                <VideoPlayer thumbnail="/images/luxury-car.jpg" title="Gameplay Reveal" />
               </div>
             </TabsContent>
           </Tabs>

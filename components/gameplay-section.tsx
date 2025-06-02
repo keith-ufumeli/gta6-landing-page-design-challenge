@@ -13,7 +13,7 @@ const features = [
     title: "Expansive Open World",
     description:
       "Explore the largest and most detailed Vice City ever created, with diverse neighborhoods, hidden locations, and dynamic environments that evolve over time.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/gameplay-world.jpg",
   },
   {
     id: "vehicles",
@@ -21,7 +21,7 @@ const features = [
     title: "Advanced Vehicle Mechanics",
     description:
       "Experience next-gen driving physics with hundreds of customizable vehicles, from sports cars and motorcycles to boats and aircraft.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/gameplay-vehicles.jpg",
   },
   {
     id: "characters",
@@ -29,7 +29,7 @@ const features = [
     title: "Dual Protagonist System",
     description:
       "Switch between Lucia and Jason, each with unique abilities, storylines, and gameplay styles that intertwine throughout the narrative.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/character-lucia.jpg",
   },
   {
     id: "technology",
@@ -37,7 +37,7 @@ const features = [
     title: "Immersive Technology",
     description:
       "Utilize cutting-edge in-game technology, from smartphones with apps that affect gameplay to advanced hacking systems and social media integration.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/city-night.jpg",
   },
   {
     id: "combat",
@@ -45,7 +45,7 @@ const features = [
     title: "Enhanced Combat System",
     description:
       "Master refined shooting mechanics, stealth options, and hand-to-hand combat with a responsive and fluid control system.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/screenshot-2.jpg",
   },
   {
     id: "economy",
@@ -53,7 +53,7 @@ const features = [
     title: "Dynamic Economy",
     description:
       "Build your criminal empire through property acquisition, business management, and strategic investments in Vice City's evolving economy.",
-    image: "/placeholder.svg?height=600&width=800",
+    image: "/images/luxury-car.jpg",
   },
 ]
 

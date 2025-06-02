@@ -86,6 +86,13 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      transitionProperty: {
+        colors: "color, background-color, border-color, text-decoration-color, fill, stroke",
+        opacity: "opacity",
+        shadow: "box-shadow",
+        transform: "transform",
+        all: "all",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
