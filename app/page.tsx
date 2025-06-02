@@ -1,25 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
-import {
-  Play,
-  ChevronRight,
-  Calendar,
-  MapPin,
-  Star,
-  ShoppingCart,
-  ArrowRight,
-  Instagram,
-  Twitter,
-  Youtube,
-  Facebook,
-} from "lucide-react";
-import GameplaySection from "@/components/gameplay-section";
-import CharacterCard from "@/components/character-card";
-import VideoPlayer from "@/components/video-player";
-import MobileNav from "@/components/mobile-nav";
+import { Instagram, Twitter, Youtube, Facebook } from "lucide-react";
 import BottomNav from "@/components/bottom-nav";
 import GSAPHeroSectionPro from "@/components/gsapEnhancedHero";
 import GSAPStorySection from "@/components/gsapStorySection";
@@ -28,59 +10,13 @@ import GSAPCharactersSection from "@/components/gsapCharactersSection";
 import GSAPMediaSection from "@/components/gsapMediaSection";
 import GSAPPreOrderSection from "@/components/gsapPreOrderSection";
 import GSAPNewsletterSection from "@/components/gsapNewsletterSection";
+import GSAPNavbar from "@/components/gsapNavbar";
 
 export default function GTA6Landing() {
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-red-900/30">
-        <div className="container mx-auto flex items-center justify-between h-16 px-4">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/placeholder.svg?height=40&width=120"
-              alt="GTA 6 Logo"
-              width={120}
-              height={40}
-              className="h-10 w-auto"
-            />
-          </Link>
-
-          <div className="hidden md:flex items-center space-x-8">
-            <Link
-              href="#story"
-              className="text-sm font-medium hover:text-red-500 transition-colors"
-            >
-              Story
-            </Link>
-            <Link
-              href="#gameplay"
-              className="text-sm font-medium hover:text-red-500 transition-colors"
-            >
-              Gameplay
-            </Link>
-            <Link
-              href="#characters"
-              className="text-sm font-medium hover:text-red-500 transition-colors"
-            >
-              Characters
-            </Link>
-            <Link
-              href="#media"
-              className="text-sm font-medium hover:text-red-500 transition-colors"
-            >
-              Media
-            </Link>
-            <Button
-              variant="destructive"
-              className="bg-red-600 hover:bg-red-700"
-            >
-              Pre-order Now
-            </Button>
-          </div>
-
-          <MobileNav />
-        </div>
-      </header>
+      {/* Navbar */}
+      <GSAPNavbar />
 
       {/* Hero Section */}
       <GSAPHeroSectionPro />
@@ -88,9 +24,8 @@ export default function GTA6Landing() {
       {/* Story Section */}
       <GSAPStorySection />
 
-
       {/* Gameplay Section */}
-     <GSAPGameplaySection />
+      <GSAPGameplaySection />
 
       {/* Characters Section */}
       <GSAPCharactersSection />
@@ -98,7 +33,7 @@ export default function GTA6Landing() {
       {/* Media Section */}
       <GSAPMediaSection />
       {/* Pre-order Section */}
-     <GSAPPreOrderSection />
+      <GSAPPreOrderSection />
 
       {/* Newsletter Section */}
       <GSAPNewsletterSection />
