@@ -20,6 +20,7 @@ import GameplaySection from "@/components/gameplay-section"
 import CharacterCard from "@/components/character-card"
 import VideoPlayer from "@/components/video-player"
 import MobileNav from "@/components/mobile-nav"
+import BottomNav from "@/components/bottom-nav"
 
 export default function GTA6Landing() {
   return (
@@ -446,6 +447,9 @@ export default function GTA6Landing() {
           </div>
         </div>
       </footer>
+
+      {/* Bottom Navigation - Mobile Only */}
+      <BottomNav />
     </div>
   )
 }
