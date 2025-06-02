@@ -24,6 +24,7 @@ import BottomNav from "@/components/bottom-nav";
 import GSAPHeroSectionPro from "@/components/gsapEnhancedHero";
 import GSAPStorySection from "@/components/gsapStorySection";
 import GSAPGameplaySection from "@/components/gsapGameplaySection";
+import GSAPCharactersSection from "@/components/gsapCharactersSection";
 
 export default function GTA6Landing() {
   return (
@@ -89,41 +90,7 @@ export default function GTA6Landing() {
      <GSAPGameplaySection />
 
       {/* Characters Section */}
-      <section
-        id="characters"
-        className="py-24 bg-gradient-to-b from-zinc-900 to-black"
-      >
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-            MEET THE CHARACTERS
-          </h2>
-          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            Discover the complex personalities that shape the criminal landscape
-            of Vice City
-          </p>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <CharacterCard
-              name="Lucia"
-              role="The Mastermind"
-              image="/images/character-lucia.jpg"
-              description="A cunning and ambitious former cartel member with a talent for strategy and manipulation."
-            />
-            <CharacterCard
-              name="Jason"
-              role="The Enforcer"
-              image="/images/character-jason.jpg"
-              description="An ex-military specialist with unmatched combat skills and a complicated moral code."
-            />
-            <CharacterCard
-              name="Ricardo Diaz"
-              role="The Kingpin"
-              image="/images/character-ricardo.jpg"
-              description="Vice City's most powerful crime lord who controls the city's underworld with an iron fist."
-            />
-          </div>
-        </div>
-      </section>
+      <GSAPCharactersSection />
 
       {/* Media Section */}
       <section id="media" className="py-24 bg-black">
