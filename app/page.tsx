@@ -27,6 +27,7 @@ import GSAPGameplaySection from "@/components/gsapGameplaySection";
 import GSAPCharactersSection from "@/components/gsapCharactersSection";
 import GSAPMediaSection from "@/components/gsapMediaSection";
 import GSAPPreOrderSection from "@/components/gsapPreOrderSection";
+import GSAPNewsletterSection from "@/components/gsapNewsletterSection";
 
 export default function GTA6Landing() {
   return (
@@ -100,33 +101,7 @@ export default function GTA6Landing() {
      <GSAPPreOrderSection />
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-zinc-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              STAY UPDATED
-            </h2>
-            <p className="text-gray-400 mb-6">
-              Subscribe to our newsletter for exclusive GTA 6 updates,
-              behind-the-scenes content, and early access opportunities.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex h-10 w-full rounded-md border border-red-900/30 bg-zinc-800 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-              />
-              <Button
-                variant="destructive"
-                className="bg-red-600 hover:bg-red-700"
-              >
-                Subscribe
-              </Button>
-            </form>
-          </div>
-        </div>
-      </section>
-
+      <GSAPNewsletterSection />
       {/* Footer */}
       <footer className="bg-black border-t border-red-900/30 py-12">
         <div className="container mx-auto px-4">
