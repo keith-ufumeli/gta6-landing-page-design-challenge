@@ -25,6 +25,7 @@ import GSAPHeroSectionPro from "@/components/gsapEnhancedHero";
 import GSAPStorySection from "@/components/gsapStorySection";
 import GSAPGameplaySection from "@/components/gsapGameplaySection";
 import GSAPCharactersSection from "@/components/gsapCharactersSection";
+import GSAPMediaSection from "@/components/gsapMediaSection";
 
 export default function GTA6Landing() {
   return (
@@ -93,54 +94,7 @@ export default function GTA6Landing() {
       <GSAPCharactersSection />
 
       {/* Media Section */}
-      <section id="media" className="py-24 bg-black">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-            MEDIA GALLERY
-          </h2>
-          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            Explore the stunning visuals and immersive world of Grand Theft Auto
-            VI
-          </p>
-
-          <Tabs defaultValue="screenshots" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto mb-8 grid-cols-2">
-              <TabsTrigger value="screenshots">Screenshots</TabsTrigger>
-              <TabsTrigger value="videos">Videos</TabsTrigger>
-            </TabsList>
-            <TabsContent value="screenshots">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
-                  <div
-                    key={item}
-                    className="aspect-video relative rounded-lg overflow-hidden group cursor-pointer"
-                  >
-                    <Image
-                      src={`/images/screenshot-${Math.min(item, 4)}.jpg`}
-                      alt={`GTA 6 Screenshot ${item}`}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105"
-                    />
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-            <TabsContent value="videos">
-              <div className="grid md:grid-cols-2 gap-6">
-                <VideoPlayer
-                  thumbnail="/images/city-night.jpg"
-                  title="Official Trailer"
-                />
-                <VideoPlayer
-                  thumbnail="/images/luxury-car.jpg"
-                  title="Gameplay Reveal"
-                />
-              </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
-
+      <GSAPMediaSection />
       {/* Pre-order Section */}
       <section className="py-24 bg-gradient-to-b from-black to-red-950/50">
         <div className="container mx-auto px-4">
