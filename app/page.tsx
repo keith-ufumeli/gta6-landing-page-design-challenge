@@ -22,6 +22,8 @@ import VideoPlayer from "@/components/video-player";
 import MobileNav from "@/components/mobile-nav";
 import BottomNav from "@/components/bottom-nav";
 import GSAPHeroSectionPro from "@/components/gsapEnhancedHero";
+import GSAPStorySection from "@/components/gsapStorySection";
+import GSAPGameplaySection from "@/components/gsapGameplaySection";
 
 export default function GTA6Landing() {
   return (
@@ -78,70 +80,13 @@ export default function GTA6Landing() {
 
       {/* Hero Section */}
       <GSAPHeroSectionPro />
+
       {/* Story Section */}
-      <section
-        id="story"
-        className="py-24 bg-gradient-to-b from-black to-zinc-900"
-      >
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-red-500">
-                A NEW CRIMINAL SAGA BEGINS
-              </h2>
-              <p className="text-lg mb-6 text-gray-300">
-                Return to Vice City, a sprawling metropolis where crime,
-                corruption, and opportunity intertwine. Follow the journey of
-                Lucia and Jason, two characters whose destinies collide in a
-                story of ambition, betrayal, and survival.
-              </p>
-              <p className="text-lg mb-8 text-gray-300">
-                Set in the sun-soaked streets of a reimagined Vice City, GTA VI
-                delivers the most immersive and expansive open world in the
-                series' history. Navigate the treacherous criminal underworld as
-                you rise from small-time hustler to kingpin of your own empire.
-              </p>
-              <Button
-                variant="outline"
-                className="border-red-600 text-red-500 hover:bg-red-600 hover:text-white hover:border-red-600 transition-all duration-300"
-              >
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image
-                src="/images/vice-city-skyline.jpg"
-                alt="GTA 6 Story"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent" />
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-600/80 hover:bg-red-600 rounded-full h-16 w-16"
-              >
-                <Play className="h-8 w-8" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <GSAPStorySection />
+
 
       {/* Gameplay Section */}
-      <section id="gameplay" className="py-24 bg-zinc-900">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center">
-            GAMEPLAY FEATURES
-          </h2>
-          <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-            Experience the next generation of open-world gameplay with
-            unprecedented freedom and immersion
-          </p>
-
-          <GameplaySection />
-        </div>
-      </section>
+     <GSAPGameplaySection />
 
       {/* Characters Section */}
       <section
