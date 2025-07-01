@@ -275,7 +275,7 @@ const GSAPNavbar = () => {
         </div>
 
         {/* Game Info Bar - Desktop Only */}
-        <div className="hidden lg:block border-t border-red-900/20 bg-black/60">
+        {/* <div className="hidden lg:block border-t border-red-900/20 bg-black/60">
           <div className="container mx-auto px-4 py-2">
             <div className="flex items-center justify-center gap-8 text-xs text-gray-400">
               <div className="flex items-center gap-2">
@@ -295,7 +295,7 @@ const GSAPNavbar = () => {
               </Badge>
             </div>
           </div>
-        </div>
+        </div> */}
       </nav>
 
       {/* Mobile Menu Overlay */}
