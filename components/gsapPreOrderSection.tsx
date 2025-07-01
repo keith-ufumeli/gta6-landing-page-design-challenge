@@ -385,7 +385,7 @@ const GSAPPreOrderSection = () => {
         </div>
 
         {/* Pre-Order Cards */}
-        <div ref={cardsRef} className="grid md:grid-cols-3 gap-8 mb-16">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16 max-w-7xl mx-auto">
           {preOrderEditions.map((edition, index) => (
             <Card
               key={edition.id}
@@ -393,31 +393,31 @@ const GSAPPreOrderSection = () => {
                 edition.popular 
                   ? 'border-red-500/50 bg-gradient-to-b from-red-950/30 to-black/80 scale-105 shadow-xl shadow-red-500/20' 
                   : 'border-gray-700/50 bg-black/60 hover:border-gray-600/70'
-              } backdrop-blur-sm`}
+              } backdrop-blur-sm h-full flex flex-col ${edition.badge ? 'pt-8' : ''}`}
             >
               {/* Popular Badge */}
               {edition.badge && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
-                  <Badge className="bg-red-600 text-white px-4 py-1 font-bold text-sm">
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
+                  <Badge className="bg-red-600 text-white px-4 py-2 font-bold text-sm shadow-lg shadow-red-500/30">
                     {edition.badge}
                   </Badge>
                 </div>
               )}
 
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8 flex flex-col h-full">
                 {/* Header */}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{edition.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{edition.description}</p>
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">{edition.name}</h3>
+                  <p className="text-gray-400 text-sm sm:text-base mb-6 leading-relaxed">{edition.description}</p>
                   
                   {/* Pricing */}
-                  <div className="flex items-center justify-center gap-3 mb-6">
+                  <div className="flex items-center justify-center gap-3 mb-8">
                     {edition.originalPrice && (
                       <span className="text-gray-500 line-through text-lg">
                         ${edition.originalPrice}
                       </span>
                     )}
-                    <span className={`text-3xl font-black ${
+                    <span className={`text-3xl sm:text-4xl font-black ${
                       edition.popular ? 'text-red-400' : 'text-white'
                     }`}>
                       ${edition.price}
@@ -431,15 +431,15 @@ const GSAPPreOrderSection = () => {
                 </div>
 
                 {/* Features */}
-                <div className="space-y-3 mb-8">
+                <div className="space-y-4 mb-8 flex-grow">
                   {edition.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center gap-3">
-                      <div className={`p-1 rounded-full ${
+                    <div key={featureIndex} className="flex items-start gap-3">
+                      <div className={`p-1.5 rounded-full flex-shrink-0 mt-0.5 ${
                         edition.popular ? 'bg-red-600' : 'bg-gray-600'
                       }`}>
                         <Check className="w-3 h-3 text-white" />
                       </div>
-                      <span className="text-gray-300 text-sm">{feature}</span>
+                      <span className="text-gray-300 text-sm sm:text-base leading-relaxed">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -447,11 +447,11 @@ const GSAPPreOrderSection = () => {
                 {/* CTA Button */}
                 <Button
                   size="lg"
-                  className={`w-full font-bold py-3 rounded-xl transition-all duration-300 ${
+                  className={`w-full font-bold py-4 px-6 rounded-xl transition-all duration-300 ${
                     edition.popular
                       ? 'bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg shadow-red-500/30'
                       : 'bg-gray-700 hover:bg-gray-600 text-white'
-                  } transform hover:scale-105`}
+                  } transform hover:scale-105 text-base sm:text-lg`}
                 >
                   <ShoppingCart className="w-5 h-5 mr-2" />
                   {edition.buttonText}
@@ -459,8 +459,8 @@ const GSAPPreOrderSection = () => {
 
                 {/* Value Badge */}
                 {edition.popular && (
-                  <div className="text-center mt-4">
-                    <Badge variant="outline" className="border-green-500 text-green-400 bg-green-500/10">
+                  <div className="text-center mt-6">
+                    <Badge variant="outline" className="border-green-500 text-green-400 bg-green-500/10 px-3 py-1">
                       <Trophy className="w-3 h-3 mr-1" />
                       Best Value
                     </Badge>
@@ -475,27 +475,28 @@ const GSAPPreOrderSection = () => {
         <div ref={bonusesRef} className="opacity-0 mb-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">Exclusive Pre-Order Bonuses</h3>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
               Get these exclusive items only available to pre-order customers. Total value over $45!
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {exclusiveBonuses.map((bonus, index) => (
               <div
                 key={index}
-                className="bg-black/60 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 
-                         hover:border-red-500/50 transition-all duration-300 group text-center"
+                className="bg-black/60 backdrop-blur-sm p-6 sm:p-8 rounded-xl border border-gray-700/50 
+                         hover:border-red-500/50 transition-all duration-300 group text-center
+                         hover:bg-black/80 hover:scale-105 transform"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-red-600/20 
-                              rounded-full mb-4 group-hover:bg-red-600/30 transition-colors duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 bg-red-600/20 
+                              rounded-full mb-4 sm:mb-6 group-hover:bg-red-600/30 transition-colors duration-300">
                   <div className="text-red-500 group-hover:scale-110 transition-transform duration-300">
                     {bonus.icon}
                   </div>
                 </div>
-                <h4 className="font-bold text-white mb-2">{bonus.title}</h4>
-                <p className="text-gray-400 text-sm mb-3">{bonus.description}</p>
-                <Badge variant="outline" className="border-green-500 text-green-400 text-xs">
+                <h4 className="font-bold text-white mb-3 text-lg">{bonus.title}</h4>
+                <p className="text-gray-400 text-sm sm:text-base mb-4 leading-relaxed">{bonus.description}</p>
+                <Badge variant="outline" className="border-green-500 text-green-400 text-xs px-3 py-1">
                   {bonus.value}
                 </Badge>
               </div>

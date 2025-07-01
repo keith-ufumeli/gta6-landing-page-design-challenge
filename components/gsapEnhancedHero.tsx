@@ -26,7 +26,7 @@ const GSAPHeroSectionPro = () => {
     const ctx = gsap.context(() => {
       // Create main timeline
       const tl = gsap.timeline({ delay: 0.5 });
-      timelineRef.current = tl;
+      timelineRef.current = tl as any;
 
       // Set initial states
       gsap.set([badgeRef.current, titleRef.current, subtitleRef.current, buttonsRef.current, infoCardsRef.current, scrollIndicatorRef.current], {
@@ -215,7 +215,7 @@ const GSAPHeroSectionPro = () => {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
       {/* Background */}
       <GSAPHeroBackgroundPro />
       
@@ -224,7 +224,7 @@ const GSAPHeroSectionPro = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60 z-10" />
       
       {/* Hero Content */}
-      <div className="container mx-auto px-4 z-20 mt-16">
+      <div className="container mx-auto px-4 z-20">
         <div className="max-w-5xl mx-auto text-center">
           
           {/* Badge */}
@@ -247,11 +247,11 @@ const GSAPHeroSectionPro = () => {
           </div>
 
           {/* Title */}
-          <div ref={titleRef} className="opacity-0 mb-8">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-none">
+          <div ref={titleRef} className="opacity-0 mb-6">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter leading-none">
               <div className="title-main block bg-gradient-to-r from-white via-red-400 to-white 
                                bg-clip-text text-transparent bg-[length:200%_100%]
-                               drop-shadow-2xl mb-2">
+                               drop-shadow-2xl mb-1 sm:mb-2">
               </div>
               <div className="title-number block bg-gradient-to-r from-red-600 via-red-300 to-red-600 
                                bg-clip-text text-transparent bg-[length:200%_100%]
@@ -261,9 +261,9 @@ const GSAPHeroSectionPro = () => {
           </div>
 
           {/* Subtitle */}
-          <div ref={subtitleRef} className="opacity-0 mb-12">
-            <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed
-                          font-light drop-shadow-lg">
+          <div ref={subtitleRef} className="opacity-0 mb-8 sm:mb-12">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed
+                          font-light drop-shadow-lg px-4">
               Experience the next evolution of the most iconic open-world crime saga. 
               Welcome to a reimagined <span className="text-red-400 font-semibold">Vice City</span>, 
               where every choice shapes your criminal empire in the most immersive world ever created.
@@ -271,7 +271,7 @@ const GSAPHeroSectionPro = () => {
           </div>
 
           {/* Buttons */}
-          <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+          <div ref={buttonsRef} className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center mb-12 sm:mb-16">
             <Button 
               size="lg" 
               className="opacity-0 bg-gradient-to-r from-red-600 via-red-700 to-red-800 
@@ -328,7 +328,7 @@ const GSAPHeroSectionPro = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div ref={scrollIndicatorRef} className="opacity-0 absolute bottom-12 left-1/2 transform -translate-x-1/2 z-20">
+      <div ref={scrollIndicatorRef} className="opacity-0 absolute bottom-8 sm:bottom-12 left-1/2 transform -translate-x-1/2 z-20">
         <div className="cursor-pointer group">
           <div className="w-12 h-12 rounded-full bg-red-600/20 backdrop-blur-xl border-2 border-red-500/50 
                           flex items-center justify-center group-hover:bg-red-600/40 

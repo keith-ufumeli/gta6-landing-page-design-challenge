@@ -403,7 +403,10 @@ const GSAPCharactersSection = () => {
                 size="icon"
                 onClick={prevCharacter}
                 disabled={isTransitioning}
-                className="rounded-full border-gray-600 hover:border-red-500 hover:bg-red-500/20"
+                className="rounded-full border-gray-600 hover:border-red-500 hover:bg-red-500/20 
+                         text-gray-400 hover:text-red-400 transition-all duration-300
+                         disabled:opacity-50 disabled:cursor-not-allowed
+                         h-12 w-12 shadow-lg hover:shadow-red-500/20"
               >
                 <ChevronLeft className="h-5 w-5" />
               </Button>
@@ -413,7 +416,10 @@ const GSAPCharactersSection = () => {
                 size="icon"
                 onClick={nextCharacter}
                 disabled={isTransitioning}
-                className="rounded-full border-gray-600 hover:border-red-500 hover:bg-red-500/20"
+                className="rounded-full border-gray-600 hover:border-red-500 hover:bg-red-500/20 
+                         text-gray-400 hover:text-red-400 transition-all duration-300
+                         disabled:opacity-50 disabled:cursor-not-allowed
+                         h-12 w-12 shadow-lg hover:shadow-red-500/20"
               >
                 <ChevronRight className="h-5 w-5" />
               </Button>
@@ -441,9 +447,10 @@ const GSAPCharactersSection = () => {
                     size="lg"
                     className="bg-white/20 hover:bg-white/30 text-white rounded-full h-16 w-16 
                              shadow-2xl backdrop-blur-md border-2 border-white/30
-                             transform group-hover:scale-110 transition-all duration-300"
+                             transform group-hover:scale-110 transition-all duration-300
+                             hover:bg-white/40 hover:border-white/50 hover:shadow-white/20"
                   >
-                    <Play className="h-6 w-6 fill-current ml-1" />
+                    <Play className="h-6 w-6 fill-current ml-1 group-hover:scale-110 transition-transform duration-300" />
                   </Button>
                 </div>
 
@@ -460,9 +467,11 @@ const GSAPCharactersSection = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="border-white/30 text-white hover:bg-white/20 backdrop-blur-sm"
+                      className="border-white/30 text-white hover:bg-white/20 backdrop-blur-sm
+                               hover:border-white/50 hover:text-white transition-all duration-300
+                               bg-black/20 hover:bg-black/40 shadow-lg hover:shadow-white/10"
                     >
-                      <Info className="h-4 w-4 mr-2" />
+                      <Info className="h-4 w-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                       Profile
                     </Button>
                   </div>
@@ -530,10 +539,12 @@ const GSAPCharactersSection = () => {
                           key={index}
                           onClick={() => changeCharacter(index)}
                           disabled={isTransitioning}
-                          className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                          className={`w-4 h-4 rounded-full transition-all duration-300 cursor-pointer
+                                     disabled:opacity-50 disabled:cursor-not-allowed
+                                     hover:scale-125 active:scale-95 ${
                             activeCharacterIndex === index 
-                              ? `bg-gradient-to-r ${characters[index].accentColor} scale-125 shadow-lg` 
-                              : 'bg-gray-600 hover:bg-gray-500 hover:scale-110'
+                              ? `bg-gradient-to-r ${characters[index].accentColor} scale-125 shadow-lg shadow-red-500/30` 
+                              : 'bg-gray-600 hover:bg-gray-500 hover:shadow-md hover:shadow-gray-400/20'
                           }`}
                         />
                       ))}

@@ -15,6 +15,8 @@ import {
   ImageIcon,
   Maximize2,
   X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -400,10 +402,10 @@ const GSAPMediaSection = () => {
                     }
                     size="sm"
                     onClick={() => setSelectedCategory(category)}
-                    className={`transition-all duration-300 ${
+                    className={`transition-all duration-300 font-medium ${
                       selectedCategory === category
-                        ? "bg-red-600 hover:bg-red-700 text-white"
-                        : "border-gray-600 text-gray-300 hover:border-red-500 hover:text-red-400"
+                        ? "bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white shadow-lg shadow-red-500/25 hover:shadow-red-500/40 transform hover:scale-105"
+                        : "border-gray-600 text-gray-800 hover:border-red-500 hover:text-red-400 hover:bg-red-500/10 backdrop-blur-sm transform hover:scale-105"
                     }`}
                   >
                     {category}
@@ -570,9 +572,11 @@ const GSAPMediaSection = () => {
               variant="ghost"
               size="icon"
               onClick={closeLightbox}
-              className="absolute top-4 right-4 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full"
+              className="absolute top-4 right-4 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full
+                       h-12 w-12 shadow-lg hover:shadow-white/10 transition-all duration-300
+                       hover:scale-110 backdrop-blur-sm border border-white/20 hover:border-white/40"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6 hover:rotate-90 transition-transform duration-300" />
             </Button>
 
             {/* Navigation Buttons for Screenshots */}
@@ -582,17 +586,21 @@ const GSAPMediaSection = () => {
                   variant="ghost"
                   size="icon"
                   onClick={prevImage}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full
+                           h-12 w-12 shadow-lg hover:shadow-white/10 transition-all duration-300
+                           hover:scale-110 backdrop-blur-sm border border-white/20 hover:border-white/40"
                 >
-                  <X className="w-6 h-6 rotate-45" />
+                  <ChevronLeft className="w-6 h-6 hover:scale-110 transition-transform duration-300" />
                 </Button>
                 <Button
                   variant="ghost"
                   size="icon"
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full
+                           h-12 w-12 shadow-lg hover:shadow-white/10 transition-all duration-300
+                           hover:scale-110 backdrop-blur-sm border border-white/20 hover:border-white/40"
                 >
-                  <X className="w-6 h-6 -rotate-45" />
+                  <ChevronRight className="w-6 h-6 hover:scale-110 transition-transform duration-300" />
                 </Button>
               </>
             )}
@@ -625,17 +633,21 @@ const GSAPMediaSection = () => {
                       <Button
                         variant="outline"
                         size="sm"
-                        className="border-gray-600 text-gray-300"
+                        className="border-gray-600 text-gray-300 hover:border-red-500 hover:text-red-400 
+                                 hover:bg-red-500/10 backdrop-blur-sm transition-all duration-300
+                                 transform hover:scale-105"
                       >
-                        <Download className="w-4 h-4 mr-2" />
+                        <Download className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                         Download
                       </Button>
                       <Button
                         variant="outline"
                         size="sm"
-                        className="border-gray-600 text-gray-300"
+                        className="border-gray-600 text-gray-300 hover:border-red-500 hover:text-red-400 
+                                 hover:bg-red-500/10 backdrop-blur-sm transition-all duration-300
+                                 transform hover:scale-105"
                       >
-                        <Share2 className="w-4 h-4 mr-2" />
+                        <Share2 className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                         Share
                       </Button>
                     </div>
