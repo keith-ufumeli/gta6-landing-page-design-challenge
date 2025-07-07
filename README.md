@@ -50,7 +50,7 @@ This project showcases a modern, responsive landing page for Grand Theft Auto VI
 - **Animated Hamburger Menu**: Smooth transformation with CSS animations
 - **Side Drawer Navigation**: Modern slide-out menu with backdrop blur
 - **Bottom Navigation**: Quick access bar with auto-hide functionality
-- **Touch Optimized**: All interactions designed for mobile-first experience
+- **Touch Optimized**: All interactions are designed for mobile-first experience
 - **Safe Area Support**: Compatible with modern device notches and navigation
 
 ### 🎨 Visual Features
@@ -95,8 +95,8 @@ Ensure you have the following installed:
 
 1. **Clone the repository**
    \`\`\`bash
-   git clone https://github.com/your-username/gta6-landing-page.git
-   cd gta6-landing-page
+   git clone https://github.com/keith-ufumeli/gta6-landing-page-design-challenge.git
+   cd gta6-landing-page-design-challenge
    \`\`\`
 
 2. **Install dependencies**
@@ -232,9 +232,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need help with the project:
 
-- **GitHub Issues**: [Create an issue](https://github.com/your-username/gta6-landing-page/issues)
-- **Discussions**: [Join the discussion](https://github.com/your-username/gta6-landing-page/discussions)
-- **Email**: your-email@example.com
+- **GitHub Issues**: [Create an issue](https://github.com/keith-ufumeli/gta6-landing-page-design-challenge/issues)
+- **Discussions**: [Join the discussion](https://github.com/keith-ufumeli/gta6-landing-page-design-challenge/discussions)
+- **Email**: ufumelik@gmail.com
 
 ---
 
